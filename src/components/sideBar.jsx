@@ -7,11 +7,11 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ListItem from "@mui/material/ListItem";
 import List from "@mui/material/List";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import { styled } from "@mui/material";
+import { Avatar, styled, Typography } from "@mui/material";
 import MuiDrawer from "@mui/material/Drawer";
 import { useTheme } from "@mui/material/styles";
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import { CalendarTodayOutlined, ContactsOutlined, HelpOutlineOutlined, PeopleOutlineOutlined, PersonOutlineOutlined, ReceiptOutlined } from "@mui/icons-material";
+import { BarChartOutlined, CalendarTodayOutlined, ContactsOutlined, HelpOutlineOutlined, MapOutlined, PeopleOutlineOutlined, PersonOutlineOutlined, PieChartOutline, ReceiptOutlined, TimelineOutlined } from "@mui/icons-material";
 
 
 const Array1 = [{ "text": "Dashboard", "icon": <HomeOutlinedIcon />, "path": "/" },
@@ -36,6 +36,18 @@ const Array2 = [{ "text": "Profile Form", "icon": <PersonOutlineOutlined />, "pa
 
 
 ]
+
+const Array3 = [{ "text": "Bar Chart", "icon": <BarChartOutlined />, "path": "/bar" },
+
+
+{ "text": "Pie Chart", "icon": <PieChartOutline />, "path": "/pie" },
+{ "text": "Line Chart", "icon": <TimelineOutlined />, "path": "/line" },
+{ "text": "Geography Chart", "icon": <MapOutlined />, "path": "/geography" },
+
+
+
+]
+
 
 
 
@@ -112,6 +124,13 @@ const Side = ({ open, handleDrawerClose }) => {
         </IconButton>
       </DrawerHeader>
       <Divider />
+
+      <Avatar sx={{mx:"auto", mt:1, width:88, height:88, border:"2px solid grey"}} alt="Travis Howard" src="https://res.cloudinary.com/dvytkrzaq/image/upload/v1689319406/yes_glmqyd.png" />
+
+<Typography align="center" variant="body1">Shehab</Typography>
+<Typography variant="body1"  align="center">Admin</Typography>
+
+      <Divider />
       <List>
         {Array1.map((item) => (
           <ListItem key={item.path} disablePadding sx={{ display: "block" }}>
@@ -173,6 +192,32 @@ const Side = ({ open, handleDrawerClose }) => {
 
 
       <Divider />
+      <List>
+        {Array3.map((item) => (
+          <ListItem key={item.path} disablePadding sx={{ display: "block" }}>
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? "initial" : "center",
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : "auto",
+                  justifyContent: "center",
+                }}
+              >
+
+                {item.icon}
+
+              </ListItemIcon>
+              <ListItemText primary={item.text} sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
     </Drawer>
   );
 };
