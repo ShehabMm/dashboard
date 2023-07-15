@@ -12,6 +12,7 @@ import MuiDrawer from "@mui/material/Drawer";
 import { useTheme } from "@mui/material/styles";
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import { BarChartOutlined, CalendarTodayOutlined, ContactsOutlined, HelpOutlineOutlined, MapOutlined, PeopleOutlineOutlined, PersonOutlineOutlined, PieChartOutline, ReceiptOutlined, TimelineOutlined } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 
 const Array1 = [{ "text": "Dashboard", "icon": <HomeOutlinedIcon />, "path": "/" },
@@ -111,7 +112,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 // eslint-disable-next-line react/prop-types
 const Side = ({ open, handleDrawerClose }) => {
   const theme = useTheme();
-
+  const navigate = useNavigate()
   return (
     <Drawer variant="permanent" open={open}>
       <DrawerHeader>
@@ -125,16 +126,23 @@ const Side = ({ open, handleDrawerClose }) => {
       </DrawerHeader>
       <Divider />
 
-      <Avatar sx={{mx:"auto", mt:1, width:88, height:88, border:"2px solid grey"}} alt="Travis Howard" src="https://res.cloudinary.com/dvytkrzaq/image/upload/v1689319406/yes_glmqyd.png" />
+      <Avatar sx={{ mx: "auto", mt: 1, width: open ? 88 : 44, height: open ? 88 : 44, border: "2px solid grey", my: 1 }} alt="Travis Howard" src="https://res.cloudinary.com/dvytkrzaq/image/upload/v1689319406/yes_glmqyd.png" />
 
-<Typography align="center" variant="body1">Shehab</Typography>
-<Typography variant="body1"  align="center">Admin</Typography>
+      <Typography align="center" sx={{ fontSize: open ? 18 : 0, mb: 1, transition: '0.25s' }} >Shehab</Typography>
+      <Typography align="center" sx={{ fontSize: open ? 14 : 0, mb: 1, transition: '0.25s' }} color='info.light'>Admin</Typography>
 
       <Divider />
       <List>
         {Array1.map((item) => (
           <ListItem key={item.path} disablePadding sx={{ display: "block" }}>
             <ListItemButton
+
+onClick={()=>{
+
+  navigate(item.path)
+
+}}
+      
               sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
@@ -165,6 +173,13 @@ const Side = ({ open, handleDrawerClose }) => {
         {Array2.map((item) => (
           <ListItem key={item.path} disablePadding sx={{ display: "block" }}>
             <ListItemButton
+
+onClick={()=>{
+
+  navigate(item.path)
+
+}}
+      
               sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
@@ -196,11 +211,19 @@ const Side = ({ open, handleDrawerClose }) => {
         {Array3.map((item) => (
           <ListItem key={item.path} disablePadding sx={{ display: "block" }}>
             <ListItemButton
+
+onClick={()=>{
+
+  navigate(item.path)
+
+}}
               sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
-              }}
+              }}   
+              
+              
             >
               <ListItemIcon
                 sx={{

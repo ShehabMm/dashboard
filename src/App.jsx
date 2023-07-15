@@ -2,10 +2,10 @@ import * as React from "react";
 import { createTheme, styled, ThemeProvider } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
-import Typography from "@mui/material/Typography";
 import TopBar from "./components/topBar";
 import Side from "./components/sideBar";
 import { getDesignTokens } from "./theme";
+import { Outlet } from "react-router-dom";
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
@@ -26,23 +26,30 @@ export default function MiniDrawer() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  const [mode, setMode] = React.useState(localStorage.getItem("currentMode")==null?"dark":localStorage.getItem("currentMode"));
-
+  const [mode, setMode] = React.useState(
+    localStorage.getItem("currentMode") == null
+      ? "dark"
+      : localStorage.getItem("currentMode")
+  );
 
   const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
   return (
-
     <ThemeProvider theme={theme}>
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
-        <TopBar handleDrawerOpen={handleDrawerOpen} open={open} setMode={setMode}  />
+        <TopBar
+          handleDrawerOpen={handleDrawerOpen}
+          open={open}
+          setMode={setMode}
+        />
         <Side open={open} handleDrawerClose={handleDrawerClose} />
+
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <DrawerHeader />
-          <Typography paragraph>Hello with me</Typography>
+
+          <Outlet />
         </Box>
       </Box>
-
     </ThemeProvider>
   );
 }
