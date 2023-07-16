@@ -12,7 +12,7 @@ import MuiDrawer from "@mui/material/Drawer";
 import { useTheme } from "@mui/material/styles";
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import { BarChartOutlined, CalendarTodayOutlined, ContactsOutlined, HelpOutlineOutlined, MapOutlined, PeopleOutlineOutlined, PersonOutlineOutlined, PieChartOutline, ReceiptOutlined, TimelineOutlined } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 const Array1 = [{ "text": "Dashboard", "icon": <HomeOutlinedIcon />, "path": "/" },
@@ -113,6 +113,8 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 const Side = ({ open, handleDrawerClose }) => {
   const theme = useTheme();
   const navigate = useNavigate()
+  let location = useLocation()
+
   return (
     <Drawer variant="permanent" open={open}>
       <DrawerHeader>
@@ -137,16 +139,17 @@ const Side = ({ open, handleDrawerClose }) => {
           <ListItem key={item.path} disablePadding sx={{ display: "block" }}>
             <ListItemButton
 
-onClick={()=>{
+              onClick={() => {
 
-  navigate(item.path)
+                navigate(item.path)
 
-}}
-      
+              }}
+
               sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
+                bgcolor: item.path ==location.pathname ? "grey" : null
               }}
             >
               <ListItemIcon
@@ -174,16 +177,18 @@ onClick={()=>{
           <ListItem key={item.path} disablePadding sx={{ display: "block" }}>
             <ListItemButton
 
-onClick={()=>{
+              onClick={() => {
 
-  navigate(item.path)
+                navigate(item.path)
 
-}}
-      
+              }}
+
               sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
+                bgcolor: item.path ==location.pathname ? "grey" : null
+
               }}
             >
               <ListItemIcon
@@ -212,18 +217,20 @@ onClick={()=>{
           <ListItem key={item.path} disablePadding sx={{ display: "block" }}>
             <ListItemButton
 
-onClick={()=>{
+              onClick={() => {
 
-  navigate(item.path)
+                navigate(item.path)
 
-}}
+              }}
               sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
-              }}   
-              
-              
+                bgcolor: item.path ==location.pathname ? "grey" : null
+
+              }}
+
+
             >
               <ListItemIcon
                 sx={{
