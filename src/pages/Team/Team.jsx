@@ -3,9 +3,23 @@ import { columns, rows } from './Data';
 
 
 const Team = () => {
+
+
+
+
+
+
+
+
+
+
+
+   
   return (
     <div style={{ height: 600, width: '100%', }}>
-      <DataGrid rows={rows} columns={columns} />
+      <DataGrid rows={rows} 
+// @ts-ignore
+      columns={columns} />
     </div>
   );
 }

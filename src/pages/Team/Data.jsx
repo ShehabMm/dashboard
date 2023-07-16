@@ -48,21 +48,21 @@ export const rows = [
 
 export const columns = [
   { field: "id", headerName: "ID", width: 100, align:"center", headerAlign:"center" },
-  { field: "name", headerName: "Name", width: 150 },
-  { field: "email", headerName: "Email", width: 150 },
-  { field: "age", headerName: "Age", width: 100 },
-  { field: "phone", headerName: "Phone", width: 150 },
-  { field: "access", headerName: "Access", width: 150,
+  { field: "name", headerName: "Name", width: 150 , align:"center", headerAlign:"center"},
+  { field: "email", headerName: "Email", width: 150 , align:"center", headerAlign:"center"},
+  { field: "age", headerName: "Age", width: 100, align:"center", headerAlign:"center" },
+  { field: "phone", headerName: "Phone", width: 150, align:"center", headerAlign:"center" },
+  { field: "access", headerName: "Access", width: 150,  align:"center", headerAlign:"center",
   
-  renderCell:()=>{
+  renderCell:({row:{access}})=>{
 
     return(
 
 
-<Box>
-<Typography variant="body1" color="initial">
+<Box bgcolor='info.light'  sx={{px:3, borderRadius:2, width:150, textAlign:'center'}} >
+<Typography   variant="body1" color="info"  >
 
-Admin
+{access}
 
 </Typography>
 
