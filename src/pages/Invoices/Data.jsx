@@ -48,10 +48,10 @@ export const rows = [
 ];
 
 export const columns = [
-  { field: "id", headerName: "ID", width: 100, align:"center", headerAlign:"center" , flex:1},
+  { field: "id", headerName: "ID", width: 100, type:'number',  align:"center", headerAlign:"center" , flex:1},
   { field: "name", headerName: "Name", width: 150 , align:"center", headerAlign:"center", flex:1},
   { field: "email", headerName: "Email", width: 150 , align:"center", headerAlign:"center", flex:1},
-  { field: "age", headerName: "Age", width: 100, align:"center", headerAlign:"center", flex:1 },
+  { field: "age", headerName: "Age", type:'number',  width: 100, align:"center", headerAlign:"center", flex:1 },
   { field: "phone", headerName: "Phone", width: 150, align:"center", headerAlign:"center", flex:1 },
   { field: "access", headerName: "Access", width: 150,  align:"center", headerAlign:"center",flex:1, 
   
