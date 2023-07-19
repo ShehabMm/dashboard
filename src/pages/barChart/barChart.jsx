@@ -1,9 +1,13 @@
+import Bar from "./bar";
+
+
 const BarChart = () => {
+
   return (
-    <div>
-      barChart
-    </div>
-  );
-}
+
+<Bar/>
+
+  )
+};
 
 export default BarChart;
