@@ -42,7 +42,7 @@ export default function MiniDrawer() {
           open={open}
           setMode={setMode}
         />
-        <Side open={open} handleDrawerClose={handleDrawerClose} />
+        <Side open={open} handleDrawerClose={handleDrawerClose} handleDrawerOpen={handleDrawerOpen}    />
 
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <DrawerHeader />

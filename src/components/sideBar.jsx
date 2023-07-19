@@ -110,7 +110,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 // eslint-disable-next-line react/prop-types
-const Side = ({ open, handleDrawerClose }) => {
+const Side = ({ open, handleDrawerClose, handleDrawerOpen }) => {
   const theme = useTheme();
   const navigate = useNavigate()
   let location = useLocation()
@@ -128,7 +128,7 @@ const Side = ({ open, handleDrawerClose }) => {
       </DrawerHeader>
       <Divider />
 
-      <Avatar sx={{ mx: "auto", mt: 1, width: open ? 88 : 44, height: open ? 88 : 44, border: "2px solid grey", my: 1 }} alt="Travis Howard" src="https://res.cloudinary.com/dvytkrzaq/image/upload/v1689319406/yes_glmqyd.png" />
+      <Avatar  onClick={handleDrawerOpen}  sx={{ mx: "auto", mt: 1, width: open ? 88 : 44, height: open ? 88 : 44, border: "2px solid grey", my: 1 }} alt="Travis Howard" src="https://res.cloudinary.com/dvytkrzaq/image/upload/v1689319406/yes_glmqyd.png" />
 
       <Typography align="center" sx={{ fontSize: open ? 18 : 0, mb: 1, transition: '0.25s' }} >Shehab</Typography>
       <Typography align="center" sx={{ fontSize: open ? 14 : 0, mb: 1, transition: '0.25s' }} color='info.light'>Admin</Typography>
