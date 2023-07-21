@@ -11,8 +11,7 @@ const Bar = () => {
         data={data}
         keys={["Spain", "France", "Germany"]}
         indexBy="year"
-        // @ts-ignore
-        theme={{"text": { "fontSize": 11, "fill":theme.palette.text.primary, "outlineWidth": 0, "outlineColor": "transparent"},
+        theme={{
             "axis": {
               "domain": {
                 "line": {

@@ -1,9 +1,9 @@
 import { ResponsiveLine } from '@nivo/line'
-import { Box  } from '@mui/material';
+import { Box, useTheme  } from '@mui/material';
 import { data } from './data'
 const Line = () => {
 
-
+const theme = useTheme()
   return (
     <Box sx={{ height: '75vh' }}>
 
@@ -77,6 +77,7 @@ const Line = () => {
             translateY: 0,
             itemsSpacing: 0,
             itemDirection: 'left-to-right',
+            itemTextColor: theme.palette.text.primary,
             itemWidth: 80,
             itemHeight: 20,
             itemOpacity: 0.75,
