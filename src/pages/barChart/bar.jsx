@@ -2,11 +2,11 @@ import { Box, useTheme } from "@mui/material";
 import { ResponsiveBar } from "@nivo/bar";
 import { data } from "./data";
 
-const Bar = () => {
+const Bar = ({height = "75vh"}) => {
   const theme = useTheme()
 
   return (
-    <Box sx={{ height: "75vh" }}>
+    <Box sx={{ height: height }}>
       <ResponsiveBar
         data={data}
         keys={["Spain", "France", "Germany"]}

@@ -34,15 +34,15 @@ const data = [
   }
 ]
 
-const PieChart = () => {
+const PieChart = ({height='75vh'}) => {
 
   const theme = useTheme()
   return (
-    <Box sx={{height:'75vh'}}>
+    <Box sx={{height:height}}>
     <ResponsivePie
         data={data}
 
-        theme={{"text": { "fontSize": 11, "fill":theme.palette.text.primary, "outlineWidth": 0, "outlineColor": "transparent" },
+        theme={{
         "axis": {
           "domain": {
             "line": {

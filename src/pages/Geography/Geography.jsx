@@ -4,11 +4,11 @@ import { ResponsiveChoropleth } from '@nivo/geo'
 import { data } from './data'
 import { Geo } from './worldCountries'
 
-const Geography = () => {
+const Geography = ({height='75vh'}) => {
 
   const theme = useTheme()
   return (
-    <Box sx={{ borderRadius:'5px',  height: '75vh', border: `1px solid ${theme.palette.text.primary}` }}>
+    <Box sx={{ borderRadius:'5px',  height: height, border: `1px solid ${theme.palette.text.primary}` }}>
       <ResponsiveChoropleth
         data={data}
         features={Geo.features}
