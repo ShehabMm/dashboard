@@ -18,6 +18,8 @@ const Row1 = () => {
           padding: 1.5,
           display: "flex",
           justifyContent: "space-between",
+          flexGrow:1
+
         }}
       >
         <Stack direction={"column"} gap={1}>
@@ -30,8 +32,9 @@ const Row1 = () => {
           </Typography>
         </Stack>
 
-        <Stack direction={"column"}>
-          char
+        <Stack direction={"column"}alignItems={'center'}  >
+        <Chart scheme={'accent'}/>
+
           <Typography variant="body1" color="theme.palette.text.primary">
             +14%
           </Typography>
@@ -44,6 +47,8 @@ const Row1 = () => {
           padding: 1.5,
           display: "flex",
           justifyContent: "space-between",
+          flexGrow:1
+
         }}
       >
         <Stack direction={"column"} gap={1}>
@@ -58,13 +63,13 @@ const Row1 = () => {
         </Stack>
 
         <Stack direction={"column"} alignItems={'center'}>
-          <Chart/>
+          <Chart scheme={'paired'}/>
 
 
 
 
           <Typography variant="body1" color="theme.palette.text.primary">
-            +14%
+            +21%
           </Typography>
         </Stack>
       </Paper>
@@ -75,6 +80,8 @@ const Row1 = () => {
           padding: 1.5,
           display: "flex",
           justifyContent: "space-between",
+          flexGrow:1
+
         }}
       >
         <Stack direction={"column"} gap={1}>
@@ -88,10 +95,12 @@ const Row1 = () => {
           </Typography>
         </Stack>
 
-        <Stack direction={"column"}>
-          char
+        <Stack direction={"column"}   alignItems={'center'}>
+      
+
+          <Chart scheme={'nivo'}/>
           <Typography variant="body1" color="theme.palette.text.primary">
-            +14%
+            +5%
           </Typography>
         </Stack>
       </Paper>
@@ -102,6 +111,8 @@ const Row1 = () => {
           padding: 1.5,
           display: "flex",
           justifyContent: "space-between",
+          flexGrow:1
+
         }}
       >
         <Stack direction={"column"} gap={1}>
@@ -115,10 +126,11 @@ const Row1 = () => {
           </Typography>
         </Stack>
 
-        <Stack direction={"column"}>
-          char
+        <Stack direction={"column"}  alignItems={'center'}>
+        <Chart scheme={'category10'}/>
+
           <Typography variant="body1" color="theme.palette.text.primary">
-            +14%
+            +43%
           </Typography>
         </Stack>
       </Paper>

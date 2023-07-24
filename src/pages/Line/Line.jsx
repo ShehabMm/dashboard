@@ -1,11 +1,13 @@
 import { ResponsiveLine } from '@nivo/line'
 import { Box, useTheme  } from '@mui/material';
 import { data } from './data'
-const Line = () => {
+
+// eslint-disable-next-line react/prop-types
+const Line = ({height='75vh'}) => {
 
 const theme = useTheme()
   return (
-    <Box sx={{ height: '75vh' }}>
+    <Box sx={{ height: {height} }}>
 
       <ResponsiveLine
         data={data}
