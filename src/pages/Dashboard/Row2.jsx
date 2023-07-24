@@ -4,17 +4,18 @@ import { DownloadOutlined } from "@mui/icons-material";
 
 const Row2 = () => {
   return (
-    <Stack direction={"row"} flexWrap={"wrap"} gap={1} mt={3}>
-      <Paper sx={{ border: "2px solid red", maxWidth: 1000, flexGrow: 1 }}>
+    <Stack direction={"row"} flexWrap={"wrap"} gap={2} mt={3}>
+      <Paper sx={{maxWidth: 1000, flexGrow: 1 }}>
         <Stack
           alignItems={"center"}
           direction={"row"}
           flexWrap={"wrap"}
+          flexGrow={1}
           gap={1}
           mt={3}
           sx={{ justifyContent: "space-between" }}
         >
-          <Box>
+          <Box sx={{display:'flex',  flexGrow:1}}>
             <Typography
               variant="body1"
               color="info"
@@ -42,17 +43,55 @@ const Row2 = () => {
 
       <Box
         sx={{
-          border: "2px solid red",
           height: "500px",
           width: "40vw",
           flexGrow: 1,
         }}
       >
         <Paper>
-          <Typography variant="h6" color="info" fontWeight={"bold"} p={1.2}>
+          <Typography variant="h6" color="info" fontWeight={"bold"} p={2}>
             Recent Transactions
           </Typography>
         </Paper>
+
+<Paper sx={{mt:2, p:2}}>
+<Stack direction={'row'} justifyContent={'space-between'} mx={2}>
+<Typography variant="h6" color="info">0315dsaaf</Typography>
+<Typography variant="h6" color="info">2023-04-01</Typography>
+<Typography  sx={{backgroundColor:'orangered',px:1}} variant="h6" color="info">$133.91</Typography>
+</Stack>
+
+
+</Paper>
+<Paper sx={{mt:2, p:2}}>
+<Stack direction={'row'} justifyContent={'space-between'} mx={2}>
+<Typography variant="h6" color="info">1520deefr</Typography>
+<Typography variant="h6" color="info">2023-06-01</Typography>
+<Typography  sx={{backgroundColor:'orangered',px:1}} variant="h6" color="info">$133.91</Typography>
+</Stack>
+
+
+</Paper>
+<Paper sx={{mt:2, p:2}}>
+<Stack direction={'row'} justifyContent={'space-between'} mx={2}>
+<Typography variant="h6" color="info">1370grrtyf</Typography>
+<Typography variant="h6" color="info">2023-07-01</Typography>
+<Typography  sx={{backgroundColor:'orangered',px:1}} variant="h6" color="info">$133.91</Typography>
+</Stack>
+
+
+</Paper>
+
+<Paper sx={{mt:2, p:2}}>
+<Stack direction={'row'} justifyContent={'space-between'} mx={2}>
+<Typography variant="h6" color="info">8915ds84f</Typography>
+<Typography variant="h6" color="info">2023-04-01</Typography>
+<Typography  sx={{backgroundColor:'orangered',px:1}} variant="h6" color="info">$133.91</Typography>
+</Stack>
+
+
+</Paper>
+         
       </Box>
     </Stack>
   );
