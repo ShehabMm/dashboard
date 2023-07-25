@@ -1,13 +1,16 @@
 import { ResponsiveLine } from '@nivo/line'
-import { Box, useTheme  } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 import { data } from './data'
+import MainTitle from '../../components/mainTitle';
 
 // eslint-disable-next-line react/prop-types
-const Line = ({height='75vh'}) => {
+const Line = ({ height = '75vh' }) => {
 
-const theme = useTheme()
+  const theme = useTheme()
   return (
-    <Box sx={{ height: {height} }}>
+    <Box sx={{ height: { height } }}>
+      <MainTitle subtitle={'Simple Line Chart'} title={'Line Chart'} />
+
 
       <ResponsiveLine
         data={data}

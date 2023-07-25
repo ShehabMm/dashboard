@@ -1,5 +1,6 @@
 import { Box, useTheme } from '@mui/material';
 import { ResponsivePie } from '@nivo/pie'
+import MainTitle from '../../components/mainTitle';
 
 const data = [
   {
@@ -39,6 +40,8 @@ const PieChart = ({height='75vh'}) => {
   const theme = useTheme()
   return (
     <Box sx={{height:height}}>
+                              <MainTitle  subtitle={'Simple Pie Chart'}  title={'Pie Chart'}/>
+
     <ResponsivePie
         data={data}
 

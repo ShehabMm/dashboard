@@ -1,6 +1,7 @@
 
 import { Box, useTheme } from '@mui/material';
 import { ResponsiveChoropleth } from '@nivo/geo'
+import MainTitle from '../../components/mainTitle';
 import { data } from './data'
 import { Geo } from './worldCountries'
 
@@ -9,6 +10,8 @@ const Geography = ({height='75vh'}) => {
   const theme = useTheme()
   return (
     <Box sx={{ borderRadius:'5px',  height: height, border: `px solid ${theme.palette.text.secondary}` }}>
+                  <MainTitle  subtitle={'Simple Geography Chart'}  title={'Geography'}/>
+
       <ResponsiveChoropleth
         data={data}
         features={Geo.features}
