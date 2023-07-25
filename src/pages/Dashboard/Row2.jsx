@@ -5,7 +5,7 @@ import { DownloadOutlined } from "@mui/icons-material";
 const Row2 = () => {
   return (
     <Stack direction={"row"} flexWrap={"wrap"} gap={2} mt={3}>
-      <Paper sx={{maxWidth: 1000, flexGrow: 1 }}>
+      <Paper sx={{maxWidth: '100vw', flexGrow: 1, height:'51.5vh', minWidth:'400px' }}>
         <Stack
           alignItems={"center"}
           direction={"row"}
@@ -48,13 +48,15 @@ const Row2 = () => {
           flexGrow: 1,
         }}
       >
-        <Paper>
-          <Typography variant="h6" color="info" fontWeight={"bold"} p={2}>
+        <Paper sx={{p:4 }}>
+          <Typography variant="h6" color="info" fontWeight={"bold"} >
             Recent Transactions
           </Typography>
         </Paper>
-
-<Paper sx={{mt:2, p:2}}>
+<Stack sx={{ maxHeight:{xs:'38vh', l:'500vh'}, overflow:'auto'  }} >
+  
+  
+  <Paper sx={{mt:2, p:3.5}}>
 <Stack direction={'row'} justifyContent={'space-between'} mx={2}>
 <Typography variant="h6" color="info">0315dsaaf</Typography>
 <Typography variant="h6" color="info">2023-04-01</Typography>
@@ -63,7 +65,7 @@ const Row2 = () => {
 
 
 </Paper>
-<Paper sx={{mt:2, p:2}}>
+<Paper sx={{mt:2, p:3.5}}>
 <Stack direction={'row'} justifyContent={'space-between'} mx={2}>
 <Typography variant="h6" color="info">1520deefr</Typography>
 <Typography variant="h6" color="info">2023-06-01</Typography>
@@ -72,7 +74,7 @@ const Row2 = () => {
 
 
 </Paper>
-<Paper sx={{mt:2, p:2}}>
+<Paper sx={{mt:2, p:3.5}}>
 <Stack direction={'row'} justifyContent={'space-between'} mx={2}>
 <Typography variant="h6" color="info">1370grrtyf</Typography>
 <Typography variant="h6" color="info">2023-07-01</Typography>
@@ -82,7 +84,7 @@ const Row2 = () => {
 
 </Paper>
 
-<Paper sx={{mt:2, p:2}}>
+<Paper sx={{mt:2, p:3.5}}>
 <Stack direction={'row'} justifyContent={'space-between'} mx={2}>
 <Typography variant="h6" color="info">8915ds84f</Typography>
 <Typography variant="h6" color="info">2023-04-01</Typography>
@@ -91,7 +93,21 @@ const Row2 = () => {
 
 
 </Paper>
-         
+
+
+
+<Paper sx={{mt:2, p:3.5}}>
+<Stack direction={'row'} justifyContent={'space-between'} mx={2}>
+<Typography variant="h6" color="info">8914fv84fk</Typography>
+<Typography variant="h6" color="info">2023-08-01</Typography>
+<Typography  sx={{backgroundColor:'orangered',px:1}} variant="h6" color="info">$133.91</Typography>
+</Stack>
+
+
+</Paper>
+
+</Stack>
+     
       </Box>
     </Stack>
   );

@@ -8,7 +8,7 @@ const Geography = ({height='75vh'}) => {
 
   const theme = useTheme()
   return (
-    <Box sx={{ borderRadius:'5px',  height: height, border: `1px solid ${theme.palette.text.primary}` }}>
+    <Box sx={{ borderRadius:'5px',  height: height, border: `px solid ${theme.palette.text.secondary}` }}>
       <ResponsiveChoropleth
         data={data}
         features={Geo.features}
