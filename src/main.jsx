@@ -19,6 +19,7 @@ import Geography from "./pages/Geography/Geography";
 import Calendar from './pages/Calndar/Calendar';
 import Form from './pages/Form/Form';
 import Invoices from './pages/Invoices/Invoices';
+import Notfound from "./pages/Notfound";
 
 
 const router = createBrowserRouter(
@@ -37,6 +38,7 @@ const router = createBrowserRouter(
     <Route path="calender" element={<Calendar />} /> 
     <Route path="form" element={<Form />} /> 
     <Route path="invoices" element={<Invoices />} /> 
+    <Route path="*" element={<Notfound />} /> 
 
     </Route>
   )

@@ -7,7 +7,7 @@ import Row3 from "./Row3";
 const Dashboard = () => {
   return (
     <Box>
-      <Stack direction={'row'} sx={{ justifyContent:'space-between', alignItems:'center' }}>
+      <Stack direction={'row'} sx={{ justifyContent:'space-between', alignItems:'center', mb:2 }}>
         <MainTitle subtitle={"Welcome to your dashboard"} title={"Dashboard"} />
 
         <Button
