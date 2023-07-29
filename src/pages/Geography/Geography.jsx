@@ -5,12 +5,14 @@ import MainTitle from '../../components/mainTitle';
 import { data } from './data'
 import { Geo } from './worldCountries'
 
-const Geography = ({height='75vh'}) => {
+const Geography = ({height='75vh', isShown=true}) => {
 
   const theme = useTheme()
   return (
     <Box sx={{ borderRadius:'5px',  height: height, border: `px solid ${theme.palette.text.secondary}` }}>
-                  <MainTitle  subtitle={'Simple Geography Chart'}  title={'Geography'}/>
+
+
+            {isShown?       <MainTitle  subtitle={'Simple Geography Chart'}  title={'Geography'}/>    :null}     
 
       <ResponsiveChoropleth
         data={data}

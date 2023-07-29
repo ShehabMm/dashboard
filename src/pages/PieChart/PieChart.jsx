@@ -35,13 +35,16 @@ const data = [
   }
 ]
 
-const PieChart = ({height='75vh'}) => {
+const PieChart = ({height='75vh', isShown=true}) => {
 
   const theme = useTheme()
   return (
     <Box sx={{height:height}}>
-                              <MainTitle  subtitle={'Simple Pie Chart'}  title={'Pie Chart'}/>
 
+
+                          
+
+{isShown?              <MainTitle  subtitle={'Simple Pie Chart'}  title={'Pie Chart'}/>    :null}
     <ResponsivePie
         data={data}
 

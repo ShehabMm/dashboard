@@ -4,12 +4,14 @@ import { data } from './data'
 import MainTitle from '../../components/mainTitle';
 
 // eslint-disable-next-line react/prop-types
-const Line = ({ height = '75vh' }) => {
+const Line = ({ height = '75vh', isShown=true }) => {
 
   const theme = useTheme()
   return (
     <Box sx={{ height: { height } }}>
-      <MainTitle subtitle={'Simple Line Chart'} title={'Line Chart'} />
+
+      {isShown?       <MainTitle subtitle={'Simple Line Chart'} title={'Line Chart'} />          :null}
+    
 
 
       <ResponsiveLine

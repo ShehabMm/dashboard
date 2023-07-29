@@ -8,7 +8,7 @@ const Row3 = () => {
     <Stack  direction={'row'} flexWrap={'wrap'}  mt={3} sx={{mr:'auto', gap:2}}>
   <Paper sx={{flexGrow:1,    minWidth:'400px' }}>
 <Typography variant="h4" color="info" p={5}>Campaign</Typography>
-    <PieChart  height={'40vh'}/>
+    <PieChart  height={'40vh'} isShown={false}/>
   </Paper>
 
 
@@ -18,13 +18,13 @@ const Row3 = () => {
   <Typography variant="h4" color="info" p={5}>Sales Quantity</Typography>
 
 
-  <Bar height={'40vh'}/>
+  <Bar height={'40vh'}  isShown={false}/>
   </Paper>
   <Paper sx={{flexGrow:1, minWidth:'400px'}}>
 
   <Typography variant="h4" color="info" p={5}>Geography Based Traffic</Typography>
 
-  <Geography  height={'40vh'}   />
+  <Geography  height={'40vh'}     isShown={false} />
     
     </Paper>    
     </Stack>

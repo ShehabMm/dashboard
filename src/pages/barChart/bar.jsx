@@ -3,13 +3,15 @@ import { ResponsiveBar } from "@nivo/bar";
 import MainTitle from "../../components/mainTitle";
 import { data } from "./data";
 
-const Bar = ({height = "75vh"}) => {
+const Bar = ({height = "75vh", isShown=true}) => {
   const theme = useTheme()
 
   return (
     <Box sx={{ height: height }}>
-                        <MainTitle  subtitle={'Simple Bar Chart'}  title={'Bar Chart'}/>
 
+
+                      
+{isShown?      <MainTitle  subtitle={'Simple Bar Chart'}  title={'Bar Chart'}/>   :null}
       <ResponsiveBar
         data={data}
         keys={["Spain", "France", "Germany"]}

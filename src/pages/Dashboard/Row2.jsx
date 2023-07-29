@@ -38,7 +38,7 @@ const Row2 = () => {
           </Box>
         </Stack>
 
-        <Line height={"280px"} />
+        <Line height={"280px"} isShown={false} />
       </Paper>
 
       <Box
